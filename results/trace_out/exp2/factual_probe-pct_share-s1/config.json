@@ -1,0 +1,27 @@
+{
+  "config": {
+    "n_agents": 20,
+    "topo": "scale_free",
+    "steps": 15,
+    "deploy_every": 3,
+    "target_frac": 0.4,
+    "governance_mode": "governed",
+    "adversarial": true,
+    "factual_probe": true,
+    "resistance_mean": 0.35,
+    "resistance_std": 0.12,
+    "seed": 1,
+    "informed_frac": 0.5,
+    "uninformed_sig_mult": 3.0,
+    "attack_strength": 1.0,
+    "max_workers": 10,
+    "lang": "English"
+  },
+  "item": {
+    "qid": "pct_share",
+    "question": "percentage market share of a product category",
+    "truth": 36.0,
+    "false_anchor": 75.6,
+    "sig_sd": 5.76
+  }
+}

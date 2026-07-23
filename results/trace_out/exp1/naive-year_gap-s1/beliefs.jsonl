@@ -1,0 +1,300 @@
+{"t": 0, "idx": 0, "value": 98.192, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 0, "idx": 1, "value": 76.431, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 0, "idx": 2, "value": 86.017, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 0, "idx": 3, "value": 105.315, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 0, "idx": 4, "value": 138.4, "reason": "social", "rationale": "Moved towards neighbours"}
+{"t": 0, "idx": 5, "value": 108.357, "reason": "social", "rationale": "Moved towards neighbours"}
+{"t": 0, "idx": 6, "value": 98.5, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 0, "idx": 7, "value": 95.0, "reason": "social", "rationale": "Moved towards neighbours"}
+{"t": 0, "idx": 8, "value": 80.0, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 0, "idx": 9, "value": 63.119, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 0, "idx": 10, "value": 117.615, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 0, "idx": 11, "value": 77.607, "reason": "social", "rationale": "Moved towards neighbours"}
+{"t": 0, "idx": 12, "value": 187.295, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 0, "idx": 13, "value": 85.0, "reason": "social", "rationale": "Moved towards neighbours"}
+{"t": 0, "idx": 14, "value": 89.321, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 0, "idx": 15, "value": 79.596, "reason": "evidence", "rationale": "Own measurement"}
+{"t": 0, "idx": 16, "value": 60.27, "reason": "social", "rationale": "Moved towards neighbours"}
+{"t": 0, "idx": 17, "value": 143.42, "reason": "social", "rationale": "Moved towards neighbours"}
+{"t": 0, "idx": 18, "value": 90.0, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 0, "idx": 19, "value": 114.509, "reason": "social", "rationale": "Moved towards neighbour mean"}
+{"t": 1, "idx": 0, "value": 100.3, "reason": "social", "rationale": "Averaging own guess"}
+{"t": 1, "idx": 1, "value": 73.419, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 1, "idx": 2, "value": 90.509, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 1, "idx": 3, "value": 102.349, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 1, "idx": 4, "value": 120.0, "reason": "social", "rationale": "Averaging own guess"}
+{"t": 1, "idx": 5, "value": 110.357, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 1, "idx": 6, "value": 97.2, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 1, "idx": 7, "value": 93.0, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 1, "idx": 8, "value": 78.54, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 1, "idx": 9, "value": 73.119, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 1, "idx": 10, "value": 112.5, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 1, "idx": 11, "value": 76.382, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 1, "idx": 12, "value": 157.295, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 1, "idx": 13, "value": 82.357, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 1, "idx": 14, "value": 90.351, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 1, "idx": 15, "value": 95.434, "reason": "social", "rationale": "Moved towards neighbour mean"}
+{"t": 1, "idx": 16, "value": 57.355, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 1, "idx": 17, "value": 120.091, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 1, "idx": 18, "value": 87.0, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 1, "idx": 19, "value": 106.357, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 2, "idx": 0, "value": 98.401, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 2, "idx": 1, "value": 72.469, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 2, "idx": 2, "value": 93.192, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 2, "idx": 3, "value": 101.5, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 2, "idx": 4, "value": 110.0, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 2, "idx": 5, "value": 112.357, "reason": "evidence", "rationale": "Moved towards own measurement"}
+{"t": 2, "idx": 6, "value": 96.259, "reason": "social", "rationale": "Averaging own and neighbours'"}
+{"t": 2, "idx": 7, "value": 92.0, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 2, "idx": 8, "value": 77.39, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 2, "idx": 9, "value": 80.119, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 2, "idx": 10, "value": 107.5, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 2, "idx": 11, "value": 77.104, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 2, "idx": 12, "value": 134.821, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 2, "idx": 13, "value": 80.535, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 2, "idx": 14, "value": 89.121, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 2, "idx": 15, "value": 90.112, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 2, "idx": 16, "value": 55.598, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 2, "idx": 17, "value": 109.457, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 2, "idx": 18, "value": 85.5, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 2, "idx": 19, "value": 101.429, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 3, "idx": 0, "value": 92.419, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 1, "value": 69.431, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 3, "idx": 2, "value": 92.113, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 3, "idx": 3, "value": 100.5, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 4, "value": 97.411, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 5, "value": 108.701, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 3, "idx": 6, "value": 94.791, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 7, "value": 88.292, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 3, "idx": 8, "value": 73.235, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 3, "idx": 9, "value": 85.119, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 10, "value": 104.129, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 11, "value": 77.381, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 3, "idx": 12, "value": 123.456, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 13, "value": 82.012, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 3, "idx": 14, "value": 86.572, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 3, "idx": 15, "value": 86.429, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 3, "idx": 16, "value": 52.321, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 3, "idx": 17, "value": 99.457, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 3, "idx": 18, "value": 86.383, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 3, "idx": 19, "value": 97.429, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 4, "idx": 0, "value": 91.801, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 4, "idx": 1, "value": 71.142, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 4, "idx": 2, "value": 88.5, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 4, "idx": 3, "value": 98.359, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 4, "idx": 4, "value": 90.513, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 4, "idx": 5, "value": 110.5, "reason": "evidence", "rationale": "Moved towards own measurement"}
+{"t": 4, "idx": 6, "value": 92.395, "reason": "social", "rationale": "Averaging own and neighbours'"}
+{"t": 4, "idx": 7, "value": 89.077, "reason": "evidence", "rationale": "Own measurement reliable"}
+{"t": 4, "idx": 8, "value": 75.457, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 4, "idx": 9, "value": 87.414, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 4, "idx": 10, "value": 100.387, "reason": "social", "rationale": "Averaging own guess"}
+{"t": 4, "idx": 11, "value": 76.387, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 4, "idx": 12, "value": 114.291, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 4, "idx": 13, "value": 80.456, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 4, "idx": 14, "value": 86.899, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 4, "idx": 15, "value": 84.361, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 4, "idx": 16, "value": 50.5, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 4, "idx": 17, "value": 89.151, "reason": "social", "rationale": "Averaging own guess"}
+{"t": 4, "idx": 18, "value": 85.5, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 4, "idx": 19, "value": 93.192, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 5, "idx": 0, "value": 90.315, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 5, "idx": 1, "value": 73.414, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 5, "idx": 2, "value": 86.292, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 5, "idx": 3, "value": 95.5, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 5, "idx": 4, "value": 88.235, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 5, "idx": 5, "value": 112.5, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 5, "idx": 6, "value": 91.123, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 5, "idx": 7, "value": 89.444, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 5, "idx": 8, "value": 77.456, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 5, "idx": 9, "value": 85.119, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 5, "idx": 10, "value": 96.315, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 5, "idx": 11, "value": 76.801, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 5, "idx": 12, "value": 104.431, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 5, "idx": 13, "value": 80.032, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 5, "idx": 14, "value": 86.899, "reason": "evidence", "rationale": ""}
+{"t": 5, "idx": 15, "value": 83.489, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 5, "idx": 16, "value": 49.272, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 5, "idx": 17, "value": 84.191, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 5, "idx": 18, "value": 86.377, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 5, "idx": 19, "value": 90.629, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 6, "idx": 0, "value": 87.415, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 6, "idx": 1, "value": 70.357, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 6, "idx": 2, "value": 85.063, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 6, "idx": 3, "value": 93.383, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 6, "idx": 4, "value": 83.415, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 6, "idx": 5, "value": 108.272, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 6, "idx": 6, "value": 90.421, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 6, "idx": 7, "value": 88.444, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 6, "idx": 8, "value": 73.272, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 6, "idx": 9, "value": 86.315, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 6, "idx": 10, "value": 93.191, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 6, "idx": 11, "value": 76.215, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 6, "idx": 12, "value": 98.115, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 6, "idx": 13, "value": 79.421, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 6, "idx": 14, "value": 85.509, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 6, "idx": 15, "value": 84.212, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 6, "idx": 16, "value": 48.045, "reason": "evidence", "rationale": "Own measurement"}
+{"t": 6, "idx": 17, "value": 80.012, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 6, "idx": 18, "value": 85.5, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 6, "idx": 19, "value": 89.247, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 7, "idx": 0, "value": 86.272, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 7, "idx": 1, "value": 73.515, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 7, "idx": 2, "value": 82.715, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 7, "idx": 3, "value": 90.5, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 7, "idx": 4, "value": 83.93, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 7, "idx": 5, "value": 112.159, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 7, "idx": 6, "value": 88.925, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 7, "idx": 7, "value": 88.7, "reason": "evidence", "rationale": "Closer to own"}
+{"t": 7, "idx": 8, "value": 75.5, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 7, "idx": 9, "value": 85.509, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 7, "idx": 10, "value": 90.234, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 7, "idx": 11, "value": 75.421, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 7, "idx": 12, "value": 92.529, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 7, "idx": 13, "value": 79.012, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 7, "idx": 14, "value": 86.259, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 7, "idx": 15, "value": 82.918, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 7, "idx": 16, "value": 52.35, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 7, "idx": 17, "value": 77.421, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 7, "idx": 18, "value": 86.2, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 7, "idx": 19, "value": 87.5, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 8, "idx": 0, "value": 85.123, "reason": "social", "rationale": "Averaging own guess"}
+{"t": 8, "idx": 1, "value": 75.981, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 8, "idx": 2, "value": 81.901, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 8, "idx": 3, "value": 88.272, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 8, "idx": 4, "value": 84.4, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 8, "idx": 5, "value": 108.272, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 8, "idx": 6, "value": 89.51, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 8, "idx": 7, "value": 87.885, "reason": "evidence", "rationale": "Averaging own measure"}
+{"t": 8, "idx": 8, "value": 76.29, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 8, "idx": 9, "value": 83.046, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 8, "idx": 10, "value": 87.419, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 8, "idx": 11, "value": 75.917, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 8, "idx": 12, "value": 90.032, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 8, "idx": 13, "value": 79.512, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 8, "idx": 14, "value": 85.391, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 8, "idx": 15, "value": 81.707, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 8, "idx": 16, "value": 50.698, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 8, "idx": 17, "value": 76.567, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 8, "idx": 18, "value": 85.512, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 8, "idx": 19, "value": 86.873, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 9, "idx": 0, "value": 79.431, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 9, "idx": 1, "value": 71.452, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 9, "idx": 2, "value": 81.419, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 9, "idx": 3, "value": 86.5, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 9, "idx": 4, "value": 74.599, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 9, "idx": 5, "value": 112.359, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 9, "idx": 6, "value": 90.415, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 9, "idx": 7, "value": 86.707, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 9, "idx": 8, "value": 73.415, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 9, "idx": 9, "value": 84.615, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 9, "idx": 10, "value": 85.469, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 9, "idx": 11, "value": 75.349, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 9, "idx": 12, "value": 87.283, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 9, "idx": 13, "value": 79.231, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 9, "idx": 14, "value": 86.395, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 9, "idx": 15, "value": 82.261, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 9, "idx": 16, "value": 51.419, "reason": "evidence", "rationale": "Adjusted towards own"}
+{"t": 9, "idx": 17, "value": 75.801, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 9, "idx": 18, "value": 86.258, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 9, "idx": 19, "value": 86.107, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 10, "idx": 0, "value": 80.673, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 10, "idx": 1, "value": 73.191, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 10, "idx": 2, "value": 78.192, "reason": "social", "rationale": "Averaging own guess"}
+{"t": 10, "idx": 3, "value": 82.509, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 10, "idx": 4, "value": 79.321, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 10, "idx": 5, "value": 108.093, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 10, "idx": 6, "value": 88.415, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 10, "idx": 7, "value": 86.982, "reason": "evidence", "rationale": "Toward reliable measure"}
+{"t": 10, "idx": 8, "value": 75.457, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 10, "idx": 9, "value": 82.999, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 10, "idx": 10, "value": 83.191, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 10, "idx": 11, "value": 74.049, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 10, "idx": 12, "value": 85.0, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 10, "idx": 13, "value": 78.385, "reason": "evidence", "rationale": "Averaging own measure"}
+{"t": 10, "idx": 14, "value": 86.901, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 10, "idx": 15, "value": 81.112, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 10, "idx": 16, "value": 50.5, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 10, "idx": 17, "value": 74.778, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 10, "idx": 18, "value": 85.421, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 10, "idx": 19, "value": 85.092, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 11, "idx": 0, "value": 80.85, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 11, "idx": 1, "value": 72.911, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 11, "idx": 2, "value": 78.312, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 11, "idx": 3, "value": 81.309, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 11, "idx": 4, "value": 80.971, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 11, "idx": 5, "value": 110.0, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 11, "idx": 6, "value": 89.349, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 11, "idx": 7, "value": 86.982, "reason": "evidence", "rationale": ""}
+{"t": 11, "idx": 8, "value": 76.243, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 11, "idx": 9, "value": 81.999, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 11, "idx": 10, "value": 82.059, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 11, "idx": 11, "value": 73.192, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 11, "idx": 12, "value": 84.0, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 11, "idx": 13, "value": 78.92, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 11, "idx": 14, "value": 87.429, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 11, "idx": 15, "value": 80.474, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 11, "idx": 16, "value": 51.8, "reason": "evidence", "rationale": "Adjusting towards own measurement"}
+{"t": 11, "idx": 17, "value": 74.212, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 11, "idx": 18, "value": 84.912, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 11, "idx": 19, "value": 84.707, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 12, "idx": 0, "value": 76.427, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 12, "idx": 1, "value": 69.411, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 12, "idx": 2, "value": 78.8, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 12, "idx": 3, "value": 80.85, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 12, "idx": 4, "value": 74.349, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 12, "idx": 5, "value": 100.5, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 12, "idx": 6, "value": 87.534, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 12, "idx": 7, "value": 85.509, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 12, "idx": 8, "value": 73.414, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 12, "idx": 9, "value": 82.699, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 12, "idx": 10, "value": 81.234, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 12, "idx": 11, "value": 72.911, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 12, "idx": 12, "value": 83.296, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 12, "idx": 13, "value": 79.235, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 12, "idx": 14, "value": 85.421, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 12, "idx": 15, "value": 80.936, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 12, "idx": 16, "value": 50.4, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 12, "idx": 17, "value": 74.212, "reason": "social", "rationale": "Neighbours agree"}
+{"t": 12, "idx": 18, "value": 86.123, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 12, "idx": 19, "value": 84.552, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 13, "idx": 0, "value": 78.23, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 13, "idx": 1, "value": 70.657, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 13, "idx": 2, "value": 76.265, "reason": "social", "rationale": "Averaging own guess"}
+{"t": 13, "idx": 3, "value": 79.234, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 13, "idx": 4, "value": 79.292, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 13, "idx": 5, "value": 105.5, "reason": "evidence", "rationale": "Moved towards reliable measurement"}
+{"t": 13, "idx": 6, "value": 88.387, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 13, "idx": 7, "value": 86.295, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 13, "idx": 8, "value": 75.256, "reason": "social", "rationale": "Adjusting towards neighbour mean"}
+{"t": 13, "idx": 9, "value": 80.395, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 13, "idx": 10, "value": 80.092, "reason": "social", "rationale": "Adjusted towards neighbours"}
+{"t": 13, "idx": 11, "value": 71.567, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 13, "idx": 12, "value": 82.161, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 13, "idx": 13, "value": 78.2, "reason": "evidence", "rationale": "Averaging own measure"}
+{"t": 13, "idx": 14, "value": 86.361, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 13, "idx": 15, "value": 80.493, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 13, "idx": 16, "value": 51.191, "reason": "evidence", "rationale": "Adjusted towards own measurement"}
+{"t": 13, "idx": 17, "value": 72.833, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 13, "idx": 18, "value": 84.5, "reason": "evidence", "rationale": "Averaging own measure"}
+{"t": 13, "idx": 19, "value": 83.104, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 14, "idx": 0, "value": 79.321, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 14, "idx": 1, "value": 71.421, "reason": "evidence", "rationale": "Adjusted towards reliable measurement"}
+{"t": 14, "idx": 2, "value": 76.8, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 14, "idx": 3, "value": 78.8, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 14, "idx": 4, "value": 80.2, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 14, "idx": 5, "value": 110.0, "reason": "evidence", "rationale": "Moved towards reliable measurement"}
+{"t": 14, "idx": 6, "value": 88.787, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 14, "idx": 7, "value": 85.517, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 14, "idx": 8, "value": 76.157, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 14, "idx": 9, "value": 79.456, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 14, "idx": 10, "value": 79.549, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 14, "idx": 11, "value": 71.184, "reason": "social", "rationale": "Neighbours' mean"}
+{"t": 14, "idx": 12, "value": 81.722, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 14, "idx": 13, "value": 78.492, "reason": "social", "rationale": "Neighbours' influence"}
+{"t": 14, "idx": 14, "value": 85.509, "reason": "evidence", "rationale": "Adjusting towards reliable measurement"}
+{"t": 14, "idx": 15, "value": 80.043, "reason": "evidence", "rationale": "Adjusted towards measurement"}
+{"t": 14, "idx": 16, "value": 50.5, "reason": "evidence", "rationale": "Adjusting towards measurement"}
+{"t": 14, "idx": 17, "value": 72.718, "reason": "social", "rationale": "Neighbours' consensus"}
+{"t": 14, "idx": 18, "value": 85.1, "reason": "social", "rationale": "Adjusting towards neighbours"}
+{"t": 14, "idx": 19, "value": 83.104, "reason": "social", "rationale": "Neighbours agree"}

@@ -1,0 +1,27 @@
+{
+  "config": {
+    "n_agents": 20,
+    "topo": "scale_free",
+    "steps": 15,
+    "deploy_every": 3,
+    "target_frac": 0.4,
+    "governance_mode": "unconstrained",
+    "adversarial": true,
+    "factual_probe": false,
+    "resistance_mean": 0.35,
+    "resistance_std": 0.12,
+    "seed": 0,
+    "informed_frac": 0.5,
+    "uninformed_sig_mult": 3.0,
+    "attack_strength": 1.0,
+    "max_workers": 10,
+    "lang": "English"
+  },
+  "item": {
+    "qid": "count_k",
+    "question": "number of items in a large public collection (thousands)",
+    "truth": 512.0,
+    "false_anchor": 819.2,
+    "sig_sd": 81.92
+  }
+}

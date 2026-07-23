@@ -1,0 +1,14 @@
+lang,code,low_resource,comparison,mean_diff,ci_lo,ci_hi,U,p,cliffs_delta,n_a,n_b,low_power,ci_excludes_0,significant
+English,en,False,English,0.186,0.0706,0.3038,54.0,0.0207,0.688,8,8,False,True,True
+Spanish,es,False,Spanish,0.1784,0.0351,0.3246,54.0,0.0207,0.688,8,8,False,True,True
+Catalan,ca,False,Catalan,0.1739,0.0249,0.3236,52.0,0.0379,0.625,8,8,False,True,True
+French,fr,False,French,0.1791,0.0445,0.3171,53.0,0.0281,0.656,8,8,False,True,True
+Italian,it,False,Italian,0.1679,0.0284,0.3088,53.0,0.0281,0.656,8,8,False,True,True
+Portuguese,pt,False,Portuguese,0.1881,0.0579,0.3197,54.0,0.0207,0.688,8,8,False,True,True
+German,de,False,German,0.1474,0.0048,0.2946,48.0,0.1049,0.5,8,8,False,True,False
+Luxembourgish,lb,True,Luxembourgish,0.17,0.0335,0.3083,52.0,0.0379,0.625,8,8,False,True,True
+Basque,eu,True,Basque,0.175,0.0374,0.3155,54.0,0.0207,0.688,8,8,False,True,True
+Russian,ru,False,Russian,0.1786,0.0419,0.3208,51.0,0.0499,0.594,8,8,False,True,True
+Arabic,ar,True,Arabic,0.1693,0.0233,0.3157,51.0,0.0499,0.594,8,8,False,True,True
+Simplified Chinese,zh-cn,False,Simplified Chinese,0.1756,0.0471,0.3049,54.0,0.0207,0.688,8,8,False,True,True
+Traditional Chinese,zh-tw,False,Traditional Chinese,0.1697,0.0294,0.313,50.0,0.065,0.562,8,8,False,True,False

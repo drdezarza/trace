@@ -1,0 +1,5 @@
+model,comparison,mean_diff,ci_lo,ci_hi,U,p,cliffs_delta,n_a,n_b,low_power,ci_excludes_0,significant
+Llama-3.3-70B-Instruct,Llama-3.3-70B-Instruct,0.0866,0.0375,0.1384,56.0,0.0104,0.75,8,8,False,True,True
+DeepSeek-V3.2,DeepSeek-V3.2,0.0462,-0.0164,0.111,48.0,0.1049,0.5,8,8,False,False,False
+Qwen3-235B-A22B-Instruct-2507,Qwen3-235B-A22B-Instruct-2507,0.0088,-0.0269,0.0464,32.0,1.0,0.0,8,8,False,False,False
+Hermes-4-70B,Hermes-4-70B,0.0191,-0.0643,0.1032,37.0,0.6454,0.156,8,8,False,False,False

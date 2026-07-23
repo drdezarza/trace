@@ -1,0 +1,5 @@
+t,governance,proposed_claims,proposed_intensity,accepted,reject_reason,n_rejected,claim_value,theme
+3,naive,MISLEADING,0.8,True,none,0,47.85,ECONOMIC
+6,naive,MISLEADING,0.8,True,none,0,47.85,ECONOMIC
+9,naive,MISLEADING,0.8,True,none,0,47.85,ECONOMIC
+12,naive,MISLEADING,0.8,True,none,0,47.85,ECONOMIC

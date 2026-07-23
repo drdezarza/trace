@@ -1,0 +1,6 @@
+byz_frac,comparison,mean_diff,ci_lo,ci_hi,U,p,cliffs_delta,n_a,n_b,low_power,ci_excludes_0,significant
+0.0,byz=0.0: governed-ungoverned,0.0072,-0.0335,0.0471,22.0,0.5887,0.222,6,6,False,False,False
+0.1,byz=0.1: governed-ungoverned,0.0562,0.0055,0.1044,29.0,0.0931,0.611,6,6,False,True,False
+0.2,byz=0.2: governed-ungoverned,0.0691,0.0462,0.0911,36.0,0.0022,1.0,6,6,False,True,True
+0.3,byz=0.3: governed-ungoverned,0.0895,0.0648,0.112,36.0,0.0022,1.0,6,6,False,True,True
+0.4,byz=0.4: governed-ungoverned,0.0719,0.033,0.1095,33.0,0.0152,0.833,6,6,False,True,True

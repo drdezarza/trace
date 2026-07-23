@@ -1,0 +1,5 @@
+t,governance,proposed_claims,proposed_intensity,accepted,reject_reason,n_rejected,claim_value,theme
+3,naive,EXAGGERATED,0.8,True,none,0,75.6,ECONOMIC
+6,naive,EXAGGERATED,0.8,True,none,0,75.6,ECONOMIC
+9,naive,EXAGGERATED,0.8,True,none,0,75.6,ECONOMIC
+12,naive,EXAGGERATED,0.8,True,none,0,75.6,ECONOMIC

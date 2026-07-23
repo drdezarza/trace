@@ -1,0 +1,21 @@
+idx,degree,resistance,signal,value,informed,rationale,last_reason
+0,15,0.5449214436395889,528.6403573999389,532.819,False,Neighbours' mean,social
+1,6,0.2765892303619909,426.8928265420752,451.0,True,Adjusting towards reliable measurement,evidence
+2,3,0.2866193897283853,447.19863062928056,532.999,False,Neighbours' mean,social
+3,1,0.22124376534125953,644.2804597371148,559.143,False,Adjusted towards neighbours,social
+4,9,0.4538489155189614,887.5852380923875,573.357,False,Adjusted towards neighbours,social
+5,6,0.07381535637436609,672.290967744751,651.291,True,Adjusted towards measurement,evidence
+6,6,0.5593774117059775,551.174172854577,546.857,True,Adjusted towards neighbours,social
+7,6,0.25865517189258763,521.7767595824912,526.5,True,Adjusted towards reliable measurement,evidence
+8,6,0.3882846915268518,441.7564503635263,463.119,True,Adjusting towards reliable measurement,evidence
+9,5,0.3200755549427108,324.74370767674907,551.82,False,Adjusted towards neighbours,social
+10,4,0.5254529524453968,669.1155719788875,548.111,False,Adjusting towards neighbours,social
+11,4,0.1027831148602815,523.6800028341703,485.0,False,Adjusted towards neighbours,social
+12,4,0.3113099355183791,1277.501519027296,552.228,False,Neighbours' mean,social
+13,4,0.3039134774397901,468.38074630015603,492.778,True,Adjusting towards neighbours,social
+14,6,0.4860523330802525,540.3102147294971,532.391,True,Adjusted towards measurement,evidence
+15,3,0.21801304792231627,477.1418895981422,493.429,True,Adjusted towards reliable measurement,evidence
+16,4,0.3293086150939477,328.5998488759649,351.355,True,,evidence
+17,3,0.24465698984943537,943.4063567204879,503.091,False,,evidence
+18,4,0.3550656496058711,490.35727969439904,503.0,True,Sticking with initial,evidence
+19,3,0.41993782564589865,719.9853283313566,551.115,False,Adjusted towards neighbours,social
