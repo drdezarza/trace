@@ -1,0 +1,30 @@
+{
+  "accuracy": {
+    "n_pairs": 12,
+    "mean_difference": 0.032476479267835444,
+    "positive": 11,
+    "negative": 1,
+    "p": 0.00341796875
+  },
+  "manip_drift": {
+    "n_pairs": 12,
+    "mean_difference": -0.06982766861084237,
+    "positive": 0,
+    "negative": 12,
+    "p": 0.00048828125
+  },
+  "movement_from_t0": {
+    "n_pairs": 12,
+    "mean_difference": -0.05309187118489361,
+    "positive": 0,
+    "negative": 12,
+    "p": 0.00048828125
+  },
+  "accuracy_rho_0.55": {
+    "n_pairs": 12,
+    "mean_difference": 0.019247775931042377,
+    "positive": 9,
+    "negative": 3,
+    "p": 0.02099609375
+  }
+}

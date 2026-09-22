@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """
-verify_results.py -- recompute every headline number of the paper directly from
-the saved experiment outputs, and check each against the value reported.
+verify_results.py -- historical numerical audit of the submitted version.
+
+These 109 checks retain the submitted values, tolerances and autonomy rows.
+Autonomy/gECS comparisons are excluded from the camera-ready evidence because
+judge cache keys omit changing inputs. Passing this historical audit does not
+validate those comparisons or the original scientific interpretations.
+For camera-ready additions and corrected roundings, run:
+    python scripts/verify_camera_ready.py
 
 This is an independent audit path: it does NOT re-run the notebook and makes no
 API calls. It reads only `results/trace_out/` and reimplements the notebook's
 statistical machinery (seeded bootstrap, Mann-Whitney U, Cliff's delta,
 Wilcoxon signed-rank) so that any discrepancy between the artifact and the
-manuscript is surfaced automatically.
+submitted manuscript is surfaced automatically.
 
 Usage:
     python scripts/verify_results.py            # summary
@@ -427,7 +433,8 @@ def main():
                     help="print every computed value, not just failures")
     args = ap.parse_args()
 
-    print(f"TRACE result verification\nreading: {OUT}\n")
+    print(f"TRACE submitted-version verification (historical)\nreading: {OUT}\n")
+    print("Autonomy rows are archival only; use verify_camera_ready.py for the revised analysis.\n")
     for name, fn in [("Experiment 1", exp1), ("Experiment 2", exp2),
                      ("Experiment 5", exp5), ("Experiment 3", exp3),
                      ("Experiment 4", exp4), ("Experiment 6", exp6),
@@ -452,7 +459,7 @@ def main():
             print(f"  - {n}: {d}")
         return 1
     print(f"All {len(CHECKS)} checks passed. "
-          f"Every headline number in the paper is reproduced from the artifact.")
+          f"Historical submitted-version numerical checks reproduced; excluded autonomy is not validated.")
     return 0
 
 

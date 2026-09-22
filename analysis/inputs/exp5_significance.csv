@@ -1,0 +1,10 @@
+comparison,mean_diff,ci_lo,ci_hi,U,p,cliffs_delta,n_a,n_b,low_power,ci_excludes_0,significant,metric
+Exp1 accuracy: governed - unconstrained,0.0325,0.0094,0.0541,112.0,0.0226,0.556,12,12,False,True,True,accuracy
+Exp1 manip_drift: governed - unconstrained,-0.0698,-0.1248,-0.0148,30.0,0.0166,-0.583,12,12,False,True,True,manip_drift
+Exp1 measured_autonomy: governed - unconstrained,0.3125,0.2479,0.3771,144.0,0.0,1.0,12,12,False,True,True,measured_autonomy
+Exp2 accuracy: probe - blocked,-0.0325,-0.0534,-0.0103,34.0,0.0304,-0.528,12,12,False,True,True,accuracy
+Exp3 acc @ informed=0.1: gov - unc,0.1258,0.0975,0.1561,144.0,0.0,1.0,12,12,False,True,True,accuracy
+Exp3 acc @ informed=0.25: gov - unc,0.0832,0.0643,0.1036,144.0,0.0,1.0,12,12,False,True,True,accuracy
+Exp3 acc @ informed=0.4: gov - unc,0.0422,0.0178,0.0663,118.0,0.0086,0.639,12,12,False,True,True,accuracy
+Exp3 acc @ informed=0.55: gov - unc,0.0192,-0.0005,0.0396,106.0,0.0531,0.472,12,12,False,False,False,accuracy
+Exp3 acc @ informed=0.7: gov - unc,0.0007,-0.0142,0.0182,68.0,0.8399,-0.056,12,12,False,False,False,accuracy

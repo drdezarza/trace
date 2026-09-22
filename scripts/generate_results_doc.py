@@ -15,22 +15,21 @@ def r(n): return pd.read_csv(OUT/n)
 L=[]
 A=L.append
 A("# Results\n")
-A("Every table below is generated directly from `results/trace_out/`. Reproduce with\n`python scripts/verify_results.py --verbose`.\n")
+A("Tables are generated from `results/trace_out/` by `python scripts/generate_results_doc.py`. Camera-ready supplemental checks are in `analysis/`; run `python scripts/verify_camera_ready.py`. The original verifier covers the submitted version only. Autonomy/gECS are excluded here because of the judge-cache defect.\n")
 
 A("\n## Experiment 1 — three-condition comparison\n")
-A("Adversarial `MISLEADING` attack, 4 items x 3 seeds per mode (n=12).\n")
+A("Attacks carrying explicitly non-factual labels (EXAGGERATED in 9/12 runs, MISLEADING in 3/12), 4 items x 3 seeds per mode (n=12). All 48 governed policies are blocked. Later arms use the same filtering setup, but only Experiments 1–2 retain policy logs.\n")
 d=r('exp1_summary.csv'); g=d.groupby('mode')
-A("| mode | accuracy | drift | divergence | autonomy | fairness | gECS | policies accepted |")
-A("|---|---|---|---|---|---|---|---|")
+A("| mode | accuracy | drift | divergence | fairness | policies accepted |")
+A("|---|---|---|---|---|---|")
 acc={'governed':'0/48','naive':'48/48','unconstrained':'48/48'}
 for m in ['governed','naive','unconstrained']:
-    A("| `%s` | %.3f | %.3f | %.3f | %.3f%s | %.3f | %.3f | %s |"%(m,
+    A("| `%s` | %.3f | %.3f | %.3f | %.3f | %s |"%(m,
       g['accuracy'].mean()[m],g['manip_drift'].mean()[m],g['divergence'].mean()[m],
-      g['measured_autonomy'].mean()[m],' †' if m=='governed' else '',
-      g['fairness'].mean()[m],g['gECS'].mean()[m],acc[m]))
-A("\n† Default value: no policy clears the governed gate, so no agent is audited. See caveat 1 in the README.\n")
+      g['fairness'].mean()[m],acc[m]))
 
 A("\n## Experiment 2 — the integrity-gate gap\n")
+A("The probe relabels the false anchor FACTUAL; its rendered number, theme and intensity match the unconstrained attack. Similar outcomes follow from that construction.\n")
 d=r('exp2_gap.csv'); g=d.groupby('condition')
 A("| condition | gate pass rate | accuracy | drift | divergence |")
 A("|---|---|---|---|---|")
@@ -48,6 +47,7 @@ for q in ['year_gap','count_k','dist_km','pct_share']:
       p[('manip_drift','blocked_misleading')][q],p[('manip_drift','factual_probe')][q]))
 
 A("\n## Experiment 3 — informed-minority threshold\n")
+A("At rho=0.55 the primary unpaired p=0.053, while the paired sensitivity check has p=0.021; no sharp threshold is established.\n")
 d=r('exp3_informed_sweep.csv')
 A("| informed fraction | accuracy governed | accuracy unconstrained | drift governed | drift unconstrained |")
 A("|---|---|---|---|---|")
@@ -58,6 +58,7 @@ for f in sorted(d.informed_frac.unique()):
       s[s['mode']=='governed']['manip_drift'].mean(),s[s['mode']=='unconstrained']['manip_drift'].mean()))
 
 A("\n## Experiment 4 — sensitivity surface\n")
+A("Small negative accuracy gaps occur at informed fractions 0.40 and 0.55. Strength zero still retains 40% intensity.\n")
 d=r('exp4_sensitivity.csv')
 A("| attack strength | informed frac | accuracy gap | drift gap |")
 A("|---|---|---|---|")
@@ -65,7 +66,7 @@ for _,x in d.iterrows():
     A("| %.2f | %.2f | %+.4f | %+.4f |"%(x.attack_strength,x.informed_frac,x.acc_gap,x.drift_gap))
 
 A("\n## Experiment 5 — significance of the core claims\n")
-d=r('exp5_significance.csv')
+d=r('exp5_significance.csv'); d=d[~d.metric.str.contains('autonomy')]
 A("| comparison | diff | CI low | CI high | U | p | Cliff δ | significant |")
 A("|---|---|---|---|---|---|---|---|")
 for _,x in d.iterrows():
@@ -73,6 +74,7 @@ for _,x in d.iterrows():
       x.mean_diff,x.ci_lo,x.ci_hi,x.U,x.p,x.cliffs_delta,'yes' if x.significant else 'no'))
 
 A("\n## Experiment 6 — across models\n")
+A("Accuracy benefits are positive for all four models, individually significant for Llama only.\n")
 a=r('exp6_stats_accuracy.csv'); dr=r('exp6_stats_drift.csv'); mm=r('exp6_multimodel.csv')
 A("| model | baseline accuracy (unc) | Δ accuracy | p | Δ drift | p |")
 A("|---|---|---|---|---|---|")
@@ -87,6 +89,7 @@ A("\nPooled across 4 models: benefit **%+.4f**, CI [%+.4f, %+.4f], Wilcoxon p=%.
 A("Skipped: `Llama-3.1-8B-Instruct` (HTTP 404 from the provider).\n")
 
 A("\n## Experiment 7 — 13 languages\n")
+A("Translated question stems and requested target-language rationales; surrounding system instructions and deployed messages remain English. This is not a fully multilingual evaluation.\n")
 a=r('exp7_stats_accuracy.csv'); dr=r('exp7_stats_drift.csv'); ml=r('exp7_multilingual.csv')
 A("| language | code | low-resource | baseline (unc) | Δ accuracy | sig | Δ drift | sig |")
 A("|---|---|---|---|---|---|---|---|")
@@ -101,18 +104,19 @@ for _,x in p7.iterrows():
     A("\n%s: **%+.4f**, CI [%+.4f, %+.4f], Wilcoxon p=%.4f, %.0f%% of cells positive.\n"
       %(x.comparison,x.mean_benefit,x.ci_lo,x.ci_hi,x.p,x.frac_positive*100))
 lr=a[a.low_resource]['mean_diff'].mean(); hr=a[~a.low_resource]['mean_diff'].mean()
-A("Low-resource mean benefit %+.4f vs %+.4f for the rest — **no double penalty observed**.\n"%(lr,hr))
+A("Low-resource mean benefit %+.4f vs %+.4f for the rest — no double penalty observed under this translated-stem configuration.\n"%(lr,hr))
 
 A("\n## Experiment 8 — embodied swarm under command-channel spoofing\n")
 d=r('exp8_swarm.csv'); g=d.groupby('mode')
-A("| mode | objective accuracy | capture | cohesion | mission success | safety violations | autonomy |")
-A("|---|---|---|---|---|---|---|")
+A("| mode | objective accuracy | capture | cohesion | mission success | safety violations |")
+A("|---|---|---|---|---|---|")
 for m in ['governed','naive','unconstrained']:
-    A("| `%s` | %.3f | %+.3f | %.3f | %.3f | %.3f | %.3f |"%(m,g['obj_acc'].mean()[m],
+    A("| `%s` | %.3f | %+.3f | %.3f | %.3f | %.3f |"%(m,g['obj_acc'].mean()[m],
       g['capture'].mean()[m],g['cohesion'].mean()[m],g['mission_success'].mean()[m],
-      g['safety_violation'].mean()[m],g['autonomy'].mean()[m]))
+      g['safety_violation'].mean()[m]))
+A("These are simulated trajectories. Higher safety violations under governance do not establish a concentration mechanism.\n")
 A("\n### Significance (n=6 seeds)\n")
-s=r('exp8_significance.csv')
+s=r('exp8_significance.csv'); s=s[~s.metric.str.contains('autonomy')]
 A("| comparison | diff | CI low | CI high | p | significant |")
 A("|---|---|---|---|---|---|")
 for _,x in s.iterrows():
@@ -129,6 +133,7 @@ for f in sorted(sw.informed_frac.unique()):
       s2[s2['mode']=='governed']['capture'].mean(),s2[s2['mode']=='unconstrained']['capture'].mean()))
 
 A("\n## Experiment 9 — Byzantine insider attack\n")
+A("The governed arm uses idealised suppression of the identified malicious peer command. Compromised beliefs remain in the neighbour mean; this is not Byzantine detection or a relabelling defense.\n")
 d=r('exp9_byzantine.csv'); s=r('exp9_significance.csv')
 A("| Byzantine fraction | accuracy ungoverned | accuracy governed | diff | p | significant |")
 A("|---|---|---|---|---|---|")
@@ -148,21 +153,20 @@ b=d[d.byz_frac==0.20]
 A("| internal Byzantine (20%%) | %.3f | %.3f | %+.3f | %+.3f |"%(
   b[~b.governed]['obj_acc'].mean(),b[b.governed]['obj_acc'].mean(),
   b[~b.governed]['capture'].mean(),b[b.governed]['capture'].mean()))
-A("\nThe ungoverned swarm is markedly more damaged by an authoritative broadcast than by "
-  "lateral peer pressure: **peer manipulation is partly self-limiting; command-channel "
-  "manipulation is not**.\n")
+A("\nIn this configuration the external attack has lower ungoverned accuracy. The attacks are not magnitude-matched (broadcast to 50% versus 20% insiders), so this comparison does not isolate authority.\n")
 
 A("\n## Figures\n")
+A("Corrected fig1, fig5 and fig8d are in `figures/`; other figures are in `results/trace_out/`. Original images remain archived and may include excluded autonomy panels.\n")
 A("| file | shows |")
 A("|---|---|")
-figs=[('fig1_grounded_comparison','Exp1: accuracy, autonomy, posited composite across modes'),
+figs=[('fig1_grounded_comparison','Exp1: accuracy and terminal drift across modes (camera-ready figure)'),
  ('fig2_integrity_gap','Exp2: the FACTUAL probe clears the gate yet degrades accuracy'),
  ('fig3_informed_threshold','Exp3: accuracy and drift vs informed-minority size'),
  ('fig4_sensitivity_map','Exp4: two-dimensional regime map of governance benefit'),
  ('fig5_forest','Exp5: forest plot of the core claims'),
  ('fig6_multimodel','Exp6: per-model benefit with bootstrap CIs'),
  ('fig7_multilingual','Exp7: per-language benefit across 13 languages'),
- ('fig8_swarm_trajectories','Exp8: physical trajectories, governed vs unconstrained'),
+ ('fig8_swarm_trajectories','Exp8: simulated trajectories, governed vs unconstrained'),
  ('fig8b_swarm_timeseries','Exp8b: swarm metrics over time'),
  ('fig8c_swarm_informed','Exp8c: embodied informed-minority threshold'),
  ('fig8d_swarm_forest','Exp8d: swarm governance benefit per metric'),

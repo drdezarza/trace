@@ -1,23 +1,21 @@
 # Results
 
-Every table below is generated directly from `results/trace_out/`. Reproduce with
-`python scripts/verify_results.py --verbose`.
+Tables are generated from `results/trace_out/` by `python scripts/generate_results_doc.py`. Camera-ready supplemental checks are in `analysis/`; run `python scripts/verify_camera_ready.py`. The original verifier covers the submitted version only. Autonomy/gECS are excluded here because of the judge-cache defect.
 
 
 ## Experiment 1 — three-condition comparison
 
-Adversarial `MISLEADING` attack, 4 items x 3 seeds per mode (n=12).
+Attacks carrying explicitly non-factual labels (EXAGGERATED in 9/12 runs, MISLEADING in 3/12), 4 items x 3 seeds per mode (n=12). All 48 governed policies are blocked. Later arms use the same filtering setup, but only Experiments 1–2 retain policy logs.
 
-| mode | accuracy | drift | divergence | autonomy | fairness | gECS | policies accepted |
-|---|---|---|---|---|---|---|---|
-| `governed` | 0.976 | 0.023 | 0.198 | 1.000 † | 0.983 | 0.958 | 0/48 |
-| `naive` | 0.942 | 0.094 | 0.231 | 0.688 | 0.961 | 0.906 | 48/48 |
-| `unconstrained` | 0.943 | 0.093 | 0.230 | 0.688 | 0.959 | 0.905 | 48/48 |
-
-† Default value: no policy clears the governed gate, so no agent is audited. See caveat 1 in the README.
-
+| mode | accuracy | drift | divergence | fairness | policies accepted |
+|---|---|---|---|---|---|
+| `governed` | 0.976 | 0.023 | 0.198 | 0.983 | 0/48 |
+| `naive` | 0.942 | 0.094 | 0.231 | 0.961 | 48/48 |
+| `unconstrained` | 0.943 | 0.093 | 0.230 | 0.959 | 48/48 |
 
 ## Experiment 2 — the integrity-gate gap
+
+The probe relabels the false anchor FACTUAL; its rendered number, theme and intensity match the unconstrained attack. Similar outcomes follow from that construction.
 
 | condition | gate pass rate | accuracy | drift | divergence |
 |---|---|---|---|---|
@@ -35,6 +33,8 @@ Adversarial `MISLEADING` attack, 4 items x 3 seeds per mode (n=12).
 
 ## Experiment 3 — informed-minority threshold
 
+At rho=0.55 the primary unpaired p=0.053, while the paired sensitivity check has p=0.021; no sharp threshold is established.
+
 | informed fraction | accuracy governed | accuracy unconstrained | drift governed | drift unconstrained |
 |---|---|---|---|---|
 | 0.10 | 0.967 | 0.841 | 0.045 | 0.234 |
@@ -44,6 +44,8 @@ Adversarial `MISLEADING` attack, 4 items x 3 seeds per mode (n=12).
 | 0.70 | 0.978 | 0.977 | 0.007 | 0.037 |
 
 ## Experiment 4 — sensitivity surface
+
+Small negative accuracy gaps occur at informed fractions 0.40 and 0.55. Strength zero still retains 40% intensity.
 
 | attack strength | informed frac | accuracy gap | drift gap |
 |---|---|---|---|
@@ -70,7 +72,6 @@ Adversarial `MISLEADING` attack, 4 items x 3 seeds per mode (n=12).
 |---|---|---|---|---|---|---|---|
 | Exp1 accuracy: governed - unconstrained | +0.0325 | +0.0094 | +0.0541 | 112 | 0.0226 | +0.556 | yes |
 | Exp1 manip_drift: governed - unconstrained | -0.0698 | -0.1248 | -0.0148 | 30 | 0.0166 | -0.583 | yes |
-| Exp1 measured_autonomy: governed - unconstrained | +0.3125 | +0.2479 | +0.3771 | 144 | 0.0000 | +1.000 | yes |
 | Exp2 accuracy: probe - blocked | -0.0325 | -0.0534 | -0.0103 | 34 | 0.0304 | -0.528 | yes |
 | Exp3 acc @ informed=0.1: gov - unc | +0.1258 | +0.0975 | +0.1561 | 144 | 0.0000 | +1.000 | yes |
 | Exp3 acc @ informed=0.25: gov - unc | +0.0832 | +0.0643 | +0.1036 | 144 | 0.0000 | +1.000 | yes |
@@ -79,6 +80,8 @@ Adversarial `MISLEADING` attack, 4 items x 3 seeds per mode (n=12).
 | Exp3 acc @ informed=0.7: gov - unc | +0.0007 | -0.0142 | +0.0182 | 68 | 0.8399 | -0.056 | no |
 
 ## Experiment 6 — across models
+
+Accuracy benefits are positive for all four models, individually significant for Llama only.
 
 | model | baseline accuracy (unc) | Δ accuracy | p | Δ drift | p |
 |---|---|---|---|---|---|
@@ -93,6 +96,8 @@ Skipped: `Llama-3.1-8B-Instruct` (HTTP 404 from the provider).
 
 
 ## Experiment 7 — 13 languages
+
+Translated question stems and requested target-language rationales; surrounding system instructions and deployed messages remain English. This is not a fully multilingual evaluation.
 
 | language | code | low-resource | baseline (unc) | Δ accuracy | sig | Δ drift | sig |
 |---|---|---|---|---|---|---|---|
@@ -115,16 +120,18 @@ pooled across languages (accuracy): **+0.0748**, CI [+0.0701, +0.0798], Wilcoxon
 
 pooled across languages (drift reduction): **+0.1738**, CI [+0.1681, +0.1786], Wilcoxon p=0.0002, 100% of cells positive.
 
-Low-resource mean benefit +0.0770 vs +0.0742 for the rest — **no double penalty observed**.
+Low-resource mean benefit +0.0770 vs +0.0742 for the rest — no double penalty observed under this translated-stem configuration.
 
 
 ## Experiment 8 — embodied swarm under command-channel spoofing
 
-| mode | objective accuracy | capture | cohesion | mission success | safety violations | autonomy |
-|---|---|---|---|---|---|---|
-| `governed` | 0.899 | +0.116 | 0.793 | 0.690 | 0.058 | 1.000 |
-| `naive` | 0.793 | +0.296 | 0.789 | 0.298 | 0.051 | 0.347 |
-| `unconstrained` | 0.797 | +0.286 | 0.797 | 0.310 | 0.014 | 0.355 |
+| mode | objective accuracy | capture | cohesion | mission success | safety violations |
+|---|---|---|---|---|---|
+| `governed` | 0.899 | +0.116 | 0.793 | 0.690 | 0.058 |
+| `naive` | 0.793 | +0.296 | 0.789 | 0.298 | 0.051 |
+| `unconstrained` | 0.797 | +0.286 | 0.797 | 0.310 | 0.014 |
+These are simulated trajectories. Higher safety violations under governance do not establish a concentration mechanism.
+
 
 ### Significance (n=6 seeds)
 
@@ -133,7 +140,6 @@ Low-resource mean benefit +0.0770 vs +0.0742 for the rest — **no double penalt
 | objective accuracy: gov - unc | +0.1013 | +0.0571 | +0.1430 | 0.0087 | yes |
 | capture reduced: unc - gov | +0.1707 | +0.1018 | +0.2382 | 0.0022 | yes |
 | mission success: gov - unc | +0.3810 | +0.2857 | +0.4762 | 0.0044 | yes |
-| autonomy: gov - unc | +0.6452 | +0.5516 | +0.7341 | 0.0028 | yes |
 | cohesion: gov - unc (expected null) | -0.0037 | -0.0259 | +0.0170 | 1.0000 | no |
 
 ### Experiment 8c — embodied informed-minority sweep
@@ -146,6 +152,8 @@ Low-resource mean benefit +0.0770 vs +0.0742 for the rest — **no double penalt
 | 0.55 | 0.923 | 0.824 | +0.083 | +0.246 |
 
 ## Experiment 9 — Byzantine insider attack
+
+The governed arm uses idealised suppression of the identified malicious peer command. Compromised beliefs remain in the neighbour mean; this is not Byzantine detection or a relabelling defense.
 
 | Byzantine fraction | accuracy ungoverned | accuracy governed | diff | p | significant |
 |---|---|---|---|---|---|
@@ -162,21 +170,23 @@ Low-resource mean benefit +0.0770 vs +0.0742 for the rest — **no double penalt
 | external command spoof | 0.797 | 0.899 | +0.286 | +0.116 |
 | internal Byzantine (20%) | 0.837 | 0.906 | +0.241 | +0.121 |
 
-The ungoverned swarm is markedly more damaged by an authoritative broadcast than by lateral peer pressure: **peer manipulation is partly self-limiting; command-channel manipulation is not**.
+In this configuration the external attack has lower ungoverned accuracy. The attacks are not magnitude-matched (broadcast to 50% versus 20% insiders), so this comparison does not isolate authority.
 
 
 ## Figures
 
+Corrected fig1, fig5 and fig8d are in `figures/`; other figures are in `results/trace_out/`. Original images remain archived and may include excluded autonomy panels.
+
 | file | shows |
 |---|---|
-| `fig1_grounded_comparison.png` | Exp1: accuracy, autonomy, posited composite across modes |
+| `fig1_grounded_comparison.png` | Exp1: accuracy and terminal drift across modes (camera-ready figure) |
 | `fig2_integrity_gap.png` | Exp2: the FACTUAL probe clears the gate yet degrades accuracy |
 | `fig3_informed_threshold.png` | Exp3: accuracy and drift vs informed-minority size |
 | `fig4_sensitivity_map.png` | Exp4: two-dimensional regime map of governance benefit |
 | `fig5_forest.png` | Exp5: forest plot of the core claims |
 | `fig6_multimodel.png` | Exp6: per-model benefit with bootstrap CIs |
 | `fig7_multilingual.png` | Exp7: per-language benefit across 13 languages |
-| `fig8_swarm_trajectories.png` | Exp8: physical trajectories, governed vs unconstrained |
+| `fig8_swarm_trajectories.png` | Exp8: simulated trajectories, governed vs unconstrained |
 | `fig8b_swarm_timeseries.png` | Exp8b: swarm metrics over time |
 | `fig8c_swarm_informed.png` | Exp8c: embodied informed-minority threshold |
 | `fig8d_swarm_forest.png` | Exp8d: swarm governance benefit per metric |

@@ -1,7 +1,8 @@
 # Experiments
 
-Nine experiments, 706 simulation runs. All executed against
-`meta-llama/Llama-3.3-70B-Instruct` via Nebius AI Studio at temperature 0.3.
+Nine experiments, 706 simulation runs. The principal backbone is
+`meta-llama/Llama-3.3-70B-Instruct` via Nebius AI Studio at temperature 0.3;
+Experiment 6 additionally evaluates three other model families.
 Experiments 5, 8d and 9c are analysis-only: they read saved CSVs and issue no
 API calls.
 
@@ -20,10 +21,9 @@ adversarial coordinator tries to move them to the false anchor.
 
 Information is heterogeneous by design. An `informed_frac` minority receives a
 tight signal and is told it is reliable; the rest receive a 3× wider signal and
-are told it is unreliable, so they genuinely weigh social and narrative cues.
-This is load-bearing: with a uniformly informed crowd, Llama-3.3-70B is so
-evidence-anchored that narrative adoption falls below 2% and no governance
-effect can appear at all.
+are told it is unreliable, allowing them to weigh social and narrative cues.
+The reported conclusions are conditional on this signal model and the four-item
+bank; they do not establish behavior across other task families.
 
 ## The constitution
 
@@ -45,14 +45,24 @@ Computed against ground truth, not against internal quantities.
 | drift `δ` | `clip((median(v) − τ) / (φ − τ), −1, 2)` — 0 at truth, 1 at the anchor |
 | divergence `D` | `min(2, (P90(v) − P10(v)) / \|τ\|)` — dispersion, kept separate from drift |
 | fairness `F` | `1 − \|A_hub − A_periphery\|` |
-| autonomy `α` | scored by an auditing judge from the agent's **rationale text**, not from the size of its move |
+| autonomy `α` | framework definition only; cached judge scores excluded from camera-ready evidence |
 | verified integrity `I` | 1 when no policy is active; else 1 if `A ≥ 0.7`, else `A` |
-| `gECS` | `A · α · I · F` — retained only so the posited score of prior work can be read beside its grounded replacement |
+| `gECS` | `A · α · I · F` — excluded from camera-ready evidence because it depends on the cached autonomy score |
 
-`accuracy_mean` and `manip_drift_mean` are the same quantities on the mean
-rather than the median. The median is robust and *absorbs* a manipulated tail,
-so the mean-based read-outs are used wherever an experiment needs sensitivity to
-partial capture (Experiments 4, 6, 7).
+Drift measures terminal position, not movement from initialization. The
+camera-ready analysis adds per-agent error, anchor proximity and movement from
+the first logged update; see [`../analysis/README.md`](../analysis/README.md).
+`accuracy_mean` and `manip_drift_mean` apply the accuracy/drift definitions to
+the mean rather than the median (Experiments 4, 6, 7).
+
+The judge cache omits the condition and rationale from its keys; consequently,
+autonomy and gECS are retained only in the archival data, not as evidence.
+Corrected caching and rationale-faithfulness validation are required.
+
+Experiment 1 rejects all 48 proposed policies (EXAGGERATED in 9/12 runs and
+MISLEADING in 3/12): operationally a block-all control. Only Experiments 1–2
+retain policy logs. Later governed arms use the same filtering setup and carry
+this control limitation, without separately verified rejection rates.
 
 ## Experiment index
 
@@ -70,20 +80,30 @@ partial capture (Experiments 4, 6, 7).
 
 ### Experiment 2 in detail
 
-This is the paper's central negative result and the one worth inspecting
-directly. The compiler is instructed to keep `claims=FACTUAL` by citing a real
-but unrepresentative figure. Open any
-`results/trace_out/exp2/factual_probe-*/policy_log.csv`: all 48 proposals carry
-`FACTUAL`, all 48 are accepted, and accuracy still falls from 0.976 to 0.943 —
-exactly the `unconstrained` baseline of Experiment 1. A label-compliant
-adversary recovers the entire attack payoff.
+All 48 saved probe proposals carry `FACTUAL`, are accepted, and assert exactly
+the false anchor. Their ECONOMIC theme, intensity 0.80 and asserted number match
+the unconstrained attack, and the renderer hides the label from agents. Accuracy
+falls from 0.976 to 0.943, approximately the Experiment 1 unconstrained outcome.
+The similar outcomes follow from this construction. The probe demonstrates
+trust in a declared label, not a truthful-but-selective evidence attack.
+
+### Sensitivity, model and language scope
+
+Experiment 4 has small negative accuracy gaps at ρ=0.40 and 0.55. Attack
+strength zero retains 40% intensity; it is not a no-attack condition. The
+blocked false-anchor message does not establish a corrective social signal.
+Experiment 6 has positive accuracy point estimates for four models, individually
+significant for Llama only. Experiment 7 translates the question stem and asks
+for target-language rationales; surrounding system instructions and deployed
+messages remain English. Neither repetition across models nor translated stems
+establishes task-level generalization.
 
 ### The swarm port (Experiments 8–9)
 
-The same architecture instantiated physically. 14 drones in a 100×100 plane,
+The same architecture instantiated in a 2D simulation. 14 drones in a 100×100 plane,
 26 steps, a **dynamic** geometric comm graph (radius 32) that rewires as drones
 move. Belief updates are LLM-generated; motion is a deterministic Reynolds
-controller, so the outcome is *where the swarm physically ends up*.
+controller, so the outcome is *where the simulated swarm ends up*.
 
 | TRACE concept | swarm instantiation |
 |---|---|
@@ -98,6 +118,11 @@ Experiment 9 replaces the external broadcast with an insider threat: a fraction
 β of drones are compromised, already believe the spoof, and inject it into what
 their neighbours perceive — manipulation propagates peer-to-peer with no
 external message at all. Metrics are computed over honest drones only.
+The governed arm uses simulator-known identities to suppress the additional
+malicious peer command, while compromised beliefs still enter the neighbour
+mean. This is idealised suppression, not detection or resistance to relabelling.
+The external/internal comparison is configuration-dependent and not
+magnitude-matched: the broadcast targets 50% of drones, versus β=0.20 insiders.
 
 ## Reading a per-run directory
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-export_latex_tables.py -- emit the manuscript's result tables as LaTeX
-(booktabs) directly from results/trace_out/, so the paper and the artifact
-cannot disagree.
+export_latex_tables.py -- emit camera-ready result-table data as LaTeX
+(booktabs) directly from results/trace_out/. Cached autonomy rows are excluded;
+manuscript-specific formatting and supplementary prose remain in the paper.
 
     python scripts/export_latex_tables.py            # all tables to stdout
     python scripts/export_latex_tables.py --table exp1
@@ -45,16 +45,14 @@ def exp1():
     g = _read("exp1_summary.csv").groupby("mode")
     rows = ""
     for m, acc in [("governed", "0/48"), ("naive", "48/48"), ("unconstrained", "48/48")]:
-        dag = "$^{\\dagger}$" if m == "governed" else ""
         rows += (f"\\textsc{{{m}}} & {g['accuracy'].mean()[m]:.3f} & "
                  f"{g['manip_drift'].mean()[m]:.3f} & {g['divergence'].mean()[m]:.3f} & "
-                 f"{g['measured_autonomy'].mean()[m]:.3f}{dag} & "
                  f"{g['fairness'].mean()[m]:.3f} & {acc} \\\\\n")
     return _wrap(rows,
                  "Experiment~1: grounded three-condition comparison ($n{=}12$ per mode). "
-                 "$^{\\dagger}$ default value; no policy clears the gate, so no agent is audited.",
-                 "tab:exp1", "lrrrrrr",
-                 "mode & $A$ & $\\delta$ & $D$ & $\\alpha$ & $F$ & accept")
+                 "The governed arm blocks all 48 proposals.",
+                 "tab:exp1", "lrrrrr",
+                 "mode & $A$ & $\\delta$ & $D$ & $F$ & accept")
 
 
 def exp2():
@@ -67,7 +65,7 @@ def exp2():
                  f"{g['divergence'].mean()[c]:.3f} \\\\\n")
     return _wrap(rows,
                  "Experiment~2: the integrity-gate gap under an identical governed "
-                 "constitution ($n{=}12$ per condition).",
+                 "constitution ($n{=}12$ per condition); the probe relabels the false anchor.",
                  "tab:exp2", "lrrrr",
                  "condition & gate pass & $A$ & $\\delta$ & $D$")
 
@@ -90,6 +88,8 @@ def exp3():
 def exp5():
     rows = ""
     for _, x in _read("exp5_significance.csv").iterrows():
+        if "autonomy" in x.metric:
+            continue
         rows += (f"{x.comparison} & {x.mean_diff:+.4f} & {x.ci_lo:+.4f} & {x.ci_hi:+.4f} & "
                  f"{x.p:.4f} & {'yes' if x.significant else 'no'} \\\\\n")
     return _wrap(rows,
@@ -114,7 +114,8 @@ def exp7():
                  f"{tick_a} & {dx.mean_diff:+.3f} & {tick_d} \\\\\n")
     return _wrap(rows,
                  "Experiment~7: per-language governance benefit ($n{=}8$ per cell). "
-                 "${}^{*}$ marks \\emph{a priori} low-resource languages.",
+                 "${}^{*}$ marks pre-specified low-resource languages. "
+                 "Only question stems are translated; surrounding instructions and messages remain English.",
                  "tab:exp7", "llrrlrl",
                  "language & code & $A_{\\text{unc}}$ & $\\Delta A$ & sig & $\\Delta\\delta$ & sig")
 
@@ -128,7 +129,7 @@ def exp8():
                  f"{g['mission_success'].mean()[m]:.3f} & "
                  f"{g['safety_violation'].mean()[m]:.3f} \\\\\n")
     return _wrap(rows,
-                 "Experiment~8: swarm outcomes under command-channel spoofing "
+                 "Experiment~8: simulated swarm outcomes under command-channel spoofing "
                  "($n{=}6$ seeds per mode).",
                  "tab:exp8", "lrrrrr",
                  "mode & obj.\\ acc. & capture & cohesion & mission & viol.")
@@ -144,7 +145,7 @@ def exp9():
                  f"{x.p:.4f} & {'yes' if x.significant else 'no'} \\\\\n")
     return _wrap(rows,
                  "Experiment~9: honest-drone objective accuracy vs.\\ Byzantine fraction "
-                 "($n{=}6$ seeds per cell).",
+                 "($n{=}6$ seeds per cell), with idealised suppression of identified malicious peer commands.",
                  "tab:exp9", "lrrrrl",
                  "$\\beta$ & ungov. & gov. & diff & $p$ & sig.")
 

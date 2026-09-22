@@ -1,10 +1,12 @@
-# Verification only (scripts/verify_results.py)
+# Numerical verification and camera-ready analysis
 numpy>=1.24
 pandas>=2.0
 scipy>=1.10
 
-# Additionally required to re-run the notebook
+# Camera-ready plots and analysis
 matplotlib>=3.7
+
+# Additionally required to re-run the notebook
 networkx>=3.0
 openai>=1.30
 tqdm>=4.65
